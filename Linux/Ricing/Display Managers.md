@@ -1,0 +1,1 @@
+**Display Managers (DM)** are responsible for showing you a login screen upon startup, as well as letting the user choose in what [[Desktop Environment|DE]] they would like to be started (*if a default DE has not been set yet*)

@@ -1,0 +1,12 @@
+{
+  "accentColor": "#9e00b3",
+  "theme": "obsidian",
+  "cssTheme": "Obsidian gruvbox",
+  "enabledCssSnippets": [
+    "custom-rainbow-colors",
+    "no_link_underline"
+  ],
+  "textFontFamily": "Inter",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font,Hack",
+  "baseFontSize": 16
+}

@@ -1,0 +1,261 @@
+{
+  "main": {
+    "id": "68b6ac41beedeabf",
+    "type": "split",
+    "children": [
+      {
+        "id": "0eea50df6ff88d42",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cbe0e37f59e4f50e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux/Ricing/Window Managers.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Window Managers"
+            }
+          },
+          {
+            "id": "85a81657b3875a0f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Coding/Rust/Rust Control Flow.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Rust Control Flow"
+            }
+          },
+          {
+            "id": "b32e653db73f18c8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Coding/Rust/Rust Data Types.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Rust Data Types"
+            }
+          },
+          {
+            "id": "f783fe3a4a02f78c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux/NVIM.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "NVIM"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3a273874c8235448",
+    "type": "split",
+    "children": [
+      {
+        "id": "203844096e9cd279",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dcead10bbbcea214",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTime",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "0f74bdb4ef89de05",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "3b63f4a60237c494",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0831d107ac1281f7",
+    "type": "split",
+    "children": [
+      {
+        "id": "670c8e444249ce6d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1f5894a4f8cba073",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Dropshipping/Product Research.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Product Research"
+            }
+          },
+          {
+            "id": "f469cd03acffc947",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Dropshipping/Product Research.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Product Research"
+            }
+          },
+          {
+            "id": "b3c2ecb5480486f6",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1813b1af85407a39",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Dropshipping/Product Research.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Product Research"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "webpage-html-export:Export Vault to HTML": false
+    }
+  },
+  "active": "f783fe3a4a02f78c",
+  "lastOpenFiles": [
+    "Linux/Patching.md",
+    "Coding/Rust/Ownership And Borrowing.md",
+    "IMG/different_pointers_rust.svg",
+    "IMG/pointer_copy_string_rust.svg",
+    "Coding/Rust/Guessing Game In Rust.md",
+    "Coding/Rust/Rust Data Types.md",
+    "Coding/Rust/Welcome To Rust.md",
+    "Coding/Rust/Signed and Unsigned.md",
+    "Coding/Rust/Memory Management.md",
+    "Coding/Rust/Rust Control Flow.md",
+    "Coding/Rust/Rust Functions.md",
+    "Coding/Rust/Stack and Heap.md",
+    "Coding/Rust/Rust Cargo.md",
+    "Coding/Rust/Hello World.md",
+    "Linux/File Permissions.md",
+    "Linux/Ricing/Desktop Environment.md",
+    "Linux/Ricing/Window Managers.md",
+    "Linux/Installing Arch Linux.md",
+    "Linux/Bootable Drives.md",
+    "Linux/RC Files.md",
+    "Linux/NVIM.md",
+    "NVIM",
+    "Computer Science/Boot Modes.md",
+    "Non-Computers/Video CV.md",
+    "Networking/Protocols/DHCP.md",
+    "Networking/Protocols/ICMP.md",
+    "New Text Document.txt",
+    "Linux/Linux File System.md",
+    "Networking/Subnetworks.md",
+    "Non-Computers/video-cv",
+    "Non-Computers/FDC",
+    "Non-Computers",
+    "Computer Science/Operating Systems",
+    "Computer Science/Concepts",
+    "Computer Science",
+    "Docker",
+    "Non-Computers/videos",
+    "IMG/regex_example.png",
+    "IMG/UDP-RFC_1.png",
+    "IMG/TCP-RFC_1.png",
+    "IMG/Pasted image 20240109195312.png",
+    "IMG/Pasted image 20240109194546.png",
+    "IMG/Pasted image 20240108144559.png",
+    "IMG/linux_lite_iso_mounted.png",
+    "IMG/ip_header.png",
+    "Untitled.canvas"
+  ]
+}

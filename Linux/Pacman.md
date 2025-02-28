@@ -1,0 +1,1 @@
+Pacman is a Packet Manager just like `apt`, except for Arch.
