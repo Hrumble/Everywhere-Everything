@@ -177,3 +177,40 @@ fn copies(an_int : i32){
 }
 ```
 
+So if you wanted to not lose the value to the function, you'd have to return it:
+
+```rust
+fn main(){
+	let s1 : String = String::from("Hello");
+	let s2 = dont_worry(s1);
+}
+
+fn dont_worry(a_string : String) -> String{
+	// do something with the string
+	a_string // return it
+}
+```
+
+But this is honestly a pain in the ass, so of course, rust has 
+
+# References
+
+To not lose a complex data type every time you pass it to a function, you use references, which is similar to a pointer, in the way that it will point to a location inside the memory.
+
+```rust
+fn main(){
+	let s1 : String = String::from("hello");
+
+	a_function(&s1);
+	// s1 is still valid here
+}
+// not here tho ofc, just checking if you're following
+
+fn a_function(s : &String){
+	// bla bla bla u get it
+}
+```
+
+the `&s1` is a pointer to the location in the memory where the string `s1` is stored, `s : &String` indicates that the parameter is expecting a reference to a string, thus a pointer that points to a string.
+![[reference_rust.svg]]
+
