@@ -94,3 +94,182 @@ Declaring the data type would look like:
 let my_arr : [i32; 5];
 ```
 *creates an array of size 5 that contains signed 32ints*
+
+See [[Ownership And Borrowing#String Slices|String Slices]] to find out how to reference the values inside the array.
+
+### Struct
+
+If you're familiar with **OOP**, struct work similarly to a class.
+
+```rust
+struct User{
+	is_active : bool,
+	username : String,
+	email : String,
+}
+
+fn main(){
+	let user1 = User {
+		is_active : true,
+		username : String::from("John"),
+		email : String::from("john@email.com"),
+	};
+
+	println!(user1.username);
+	// John
+}
+```
+
+You can also complete values if they're the same in two different Structs:
+
+```rust
+fn main(){
+	//... We defined user1 here ...
+	let user2 = User {
+		username: String::from("Maria"),
+		..user1
+	}
+}
+```
+*All the non specified values in user2, will be filled with the values of user1*
+
+You can create a `Struct` with tuples:
+
+```rust
+struct Color(i32, i32, i32);
+
+fn main(){
+	let black : Color = Color(0, 0, 0);
+}
+```
+*See [[#Tuples]]*
+
+Or create an **unit struct**, which is simply an empty struct, maybe for future expansion, or the most idiotic state machine I've ever seen proposed by chatgpt
+
+```rust
+struct Active;
+struct Inactive;
+
+fn check_status(status : Active){
+	println!("status is Active.");	
+}
+
+fn main(){
+	let status = Active;
+	check_status(status);
+}
+```
+*I mean it's not even a state machine at this point I don't even know what was going on here...*
+### Implement
+You can assign functions to particular structs, just like adding functions under classes in python
+
+```rust
+Struct Rectangle {
+	width : u32,
+	height : u32,
+}
+
+impl Rectangle {
+	fn area(&self) -> u32 {
+		self.width * self.height
+	}
+	fn say_hello() {
+		println!("This makes litterally no sense but its an example");
+	}
+}
+
+fn main(){
+	let rect : Rectangle = Rectangle {
+		width : 30,
+		height: 50,
+	}
+
+	println!(rect.area());
+}
+```
+
+Everything in the `impl` scope will be tied to `Rectangle`
+
+## Enums
+*I strongly recommend you go to the official rust book [here](https://doc.rust-lang.org/stable/book/ch06-01-defining-an-enum.html) because it gets really messy*
+
+an **Enum** literally, *Enumeration* is a way of saying that a value is one of possible value, for instance, setting a value to either `NORTH`, `SOUTH`, `EAST`, or `WEST`.
+
+to create an Enum
+
+```rust
+enum Direction {
+	NORTH,
+	SOUTH,
+	EAST,
+	WEST,
+}
+
+fn move_to(direction : Direction){
+	match direction {
+		Direction::NORTH => println!("Going North"),
+		Direction::SOUTH => println!("Going South"),
+		// ... you get it
+	}	
+}
+
+fn main(){
+	let x : Direction = Direction::NORTH;
+	move_to(x);
+}
+```
+
+One other really cool use of *Enums*, is being able to pass data through it too
+
+```rust
+enum User {
+	INFO(String, String, i8),
+}
+
+fn main(){
+	let new_user = User::INFO(
+		String::from("Dave"), 
+		String::from("dave@mail.com"), 
+		38
+		);
+	get_age(new_user);
+}
+
+fn get_age(user : User){
+	match user {
+		User::INFO(_, _, age) => println!(age),
+	}
+}
+```
+
+>[!faq] I thought match statements match values? not extract them??
+>The match statement in rust is very versatile and can be used both, for matching, and *destructuring*.
+> If you wanted to match the age, lets say check if the user is 20years old
+> ```rust
+>match user {
+>	User::INFO(_, _, 20) => println!("user is 20");
+>} 
+>```
+> To properly match the value, rust is forced to destructure it, that's why we get to access the value.
+
+You can even pass structs in Enums
+```rust
+enum Something {
+	a_thing { a_value : i32, another_value : String},
+}
+
+fn main(){
+	let s : Something = Something::a_thing {
+		a_value : 14,
+		another_value : String::from("I dont know and I dont care"),
+	};
+}
+```
+*Told you it gets messy*.
+
+You can of course use `impl` with `Enum`, see [[#Implement]].
+
+
+
+
+

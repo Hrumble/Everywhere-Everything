@@ -214,3 +214,94 @@ fn a_function(s : &String){
 the `&s1` is a pointer to the location in the memory where the string `s1` is stored, `s : &String` indicates that the parameter is expecting a reference to a string, thus a pointer that points to a string.
 ![[reference_rust.svg]]
 
+However, what if you wanted to be able to modify the original value by passing it to the reference? in that case, you'd use:
+
+```rust
+fn main(){
+	let mut s1 : String = String::from("hello");
+
+	a_function(&mut s1);
+	println!(s1);
+}
+
+fn a_function(s : &mut String){
+	s1.push_str(", world!");
+}
+```
+
+*what is happening*
+
+Here, you create a mutable string, which literally means, that the data located in the memory allocated for the string, is allowed to be modified.
+Then, you pass a **mutable reference** to `a_function()`, this means that the reference itself is allowed to modify the object it points to, which is a **mutable string**, and thus modifies the data allocated in memory directly.
+
+Lastly the `s : &mut String`, expects a reference `&` to a **mutable** `mut` **string** `String`.
+
+**This is the basics of borrowing.** *(borrowing is just the act of using a variable, mutable or not, without taking ownership)*
+
+>[!warning] Mutable References have one BIG limit
+>You can not have more than one mutable reference to a variable in the same scope, the following code **would not compile**
+>```rust
+>fn main(){
+>	let mut s1 : String = String::from("hello");
+>	let r1 = &mut s1;	
+>	let r2 = &mut s1;
+>}
+>```
+>This would give an error.
+
+## String Slices
+
+In rust, another interesting type to understand references and borrowing is the **String Slices** type.
+
+```rust
+let x : String = String::from("Hello, world!");
+let y : &str = x[..4];
+
+println!(y);
+// Hello
+```
+
+a string slice is of type `&str`, this is because similar to a static string, it's simply a reference to a string allocated in memory, and is immutable.
+
+As a matter of fact, a static string is a **String Slice** in itself:
+```rust
+let s1 : &str = "Hello!";
+```
+
+In this case, `"Hello"` is stored in the binary of the code and is immutable, all `s1` does, is read the data at the location.
+*Yes, the type in itself is a reference*
+## Syntax
+
+```rust
+let s1 : String = String::from("This is a sentence");
+
+let slice1 : &str = &s1[..]; // Takes from 0 to len
+// same as
+let slice1 : &str = &s1[0..s1.len()];
+
+let slice2 : &str = &s1[..4] // takes from 0 to index 4
+
+let slice3 : &str = &s1[4..] // takes from 4 to len
+//same as
+let slice3 : &str = &s1[4..s1.len()];
+
+let slice4 : &str = &s1[3]
+```
+*Here we use `&s1` when assigning to a string slice, because we don't want the slice variable to take ownership of the original string*
+
+Of course, this goes for arrays to, they work the same way:
+```rust
+let a : [i32, 5] = [3, 4, 4, 6, 4];
+
+let x : &[i32] = &a[2..];
+```
+
+If you wanted to modify a certain index with the variable that borrows, you'd have to create a mutable reference
+
+```rust
+let mut a : [i32, 5] = [1, 2, 3, 4, 5];
+
+let x : &mut [i32] = &mut a[..2];
+
+x[0] = 10;
+```
