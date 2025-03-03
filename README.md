@@ -11,6 +11,7 @@ As I mentioned before, I use obsidian, so a lot of the links will not be working
 
 If this helps you, cool, if you spot any mistakes, I wouldn't mind being corrected, please do.
 
+Most of the notes here are coded in a non linear way, I am all over the place, and as such some notes will be from before I learned certain things, some might be more broad, and others more specific.
 ## What will I find here
 
 You will mainly find notes on computer stuff:
