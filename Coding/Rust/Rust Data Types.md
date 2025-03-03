@@ -269,7 +269,54 @@ fn main(){
 
 You can of course use `impl` with `Enum`, see [[#Implement]].
 
+# Collection Types
+We're going to take a look at collection types, which are types that allow you to handle a collection of data, similar to [[#Arrays]]. 
 
+## Vector Type
 
+A vector, is similar to an Array, except it size can be undefined (*more like not fixed*)
+
+```rust
+let v : Vec<i32> = Vec::new();
+```
+
+this creates a new empty vector, the `Vec<i32>` here is **necessary** since the vector is empty, the compiler doesn't know the data type at runtime.
+
+You can create a already filled vector using the `vec!` shortcut
+```rust
+let v = vec![1, 2, 3];
+```
+*the type specification is not necessary, it's inferred to be `i32` in this case*
+
+### Updating a vector
+
+You can add values to an existing vector using `push`:
+
+```rust
+let mut v = vec![1, 2, 3];
+
+v.push(5);
+v.push(6432);
+```
+*of course without forgetting the mut keyword, see [[Ownership And Borrowing]]*
+
+you can remove a value by **index** using `remove`
+
+```rust
+v.remove(1);
+```
+
+### Referencing
+
+Of course, you'd want to extract the values from your vector, once again this works similarly to **Arrays**
+
+```rust
+let v = vec![1, 2, 3, 4];
+
+let second : &i32 = &v[1];
+
+println!(second);
+```
+once again, see [[Ownership And Borrowing]]
 
 

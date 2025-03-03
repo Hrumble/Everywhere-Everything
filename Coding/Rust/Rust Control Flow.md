@@ -133,4 +133,40 @@ fn main(){
 }
 ```
 
+## Match Statements
+
+Match statement allow you to match against a multitude of possibilities:
+
+```rust
+fn main(){
+	let x : u8 = 10;
+
+	match x {
+		5 => println!("x is 5"),
+		10 => println!("Eat my ass");
+	}
+	
+}
+```
+
+>[!warning] Match statements must cover all possibilities.
+> Due to this, it's important to use a catch all statement `_`
+> ```rust
+> match x {
+> 	5 => println!("Cool its 5"),
+> 	_ => println!("Its not 5"),
+> }
+>```
+> If for some reason, you need the output of the match all, then you can just use a variable name
+> ```rust
+> match x {
+> 	5 => //something,
+> 	other => do_something(other);
+> }
+>```
+> Of course, do_something being a correctly defined function somewhere else *do it yourself I'm not your maid*
+
+*See [[Rust Data Types#Enums|Enums]] for more match power*
+
+
 **All done good.**
